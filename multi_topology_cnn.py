@@ -12,8 +12,9 @@ from keras.utils.np_utils import to_categorical
 
 from load_my_data import load_my_data
 
-
-"""PARAMETERS"""
+####################
+# PARAMETERS
+####################
 topology = 'VGG16'  # choices are 'inceptionv3' or 'resnet50' or 'VGG16' or 'VGG19'
 
 top_model_weights_path = 'bottleneck_fc_model.h5'

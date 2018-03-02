@@ -6,9 +6,10 @@ from keras import backend as K
 from keras.preprocessing.image import ImageDataGenerator
 from keras.utils import np_utils
 
-"""HELPER MODULE TO LOAD DATA"""
-
 def load_my_data(img_rows, img_cols,batch_size, topology,train_data_dir,validation_data_dir):
+    """
+    Helper Module to Load Data
+    """
     train_datagen = ImageDataGenerator(rescale=1./255)
 
     test_datagen = ImageDataGenerator(rescale=1./255)
@@ -24,6 +25,5 @@ def load_my_data(img_rows, img_cols,batch_size, topology,train_data_dir,validati
             target_size=(img_rows, img_cols),
             batch_size=batch_size,
             class_mode='categorical')
-
 
     return train_generator, validation_generator
